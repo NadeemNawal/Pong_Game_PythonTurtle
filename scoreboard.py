@@ -22,7 +22,7 @@ class Score(Turtle):
     def show_score(self):                              
 
         self.clear()
-        self.write(f"{"Target Score = 2"} \n {self.l_score} - {self.r_score}", align="center", font=("Courier", 30, "normal"))
+        self.write(f"{"Target Score = 20"} \n {self.l_score} - {self.r_score}", align="center", font=("Courier", 30, "normal"))
 
         if self.l_score >= 20:
             self.clear()
