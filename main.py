@@ -31,29 +31,29 @@ game_is_on = True
 
 while game_is_on:
     if ball.ycor() > 280 or ball.ycor() < -280:                 
-        ball.y_bounce()                                         
+        ball.y_bounce()                                        
 
     if (ball.distance(right_paddle) < 50 and ball.xcor() > 340) or (ball.distance(left_paddle) < 50 and ball.xcor() < -340):
         ball.x_bounce()                                         
         if ball.ball_speed >= 0.04:                             
-            ball.ball_speed = ball.ball_speed - 0.01            
+            ball.ball_speed = ball.ball_speed - 0.01           
 
     if ball.xcor() > 380:                                       
-        score.increment_lscore()                                
+        score.increment_l_score()                               
         ball.goto(0, 0)                                         
     if ball.xcor() < -380:                                      
-        score.increment_rscore()                                
+        score.increment_r_score()                                
         ball.goto(0, 0)                                         
 
-    if score.r_score or score.l_score >=20:
+    if score.r_score >= 20 or score.l_score >= 20:
         game_is_on = False
 
 
-    ball.ball_move()                                           
+    ball.ball_move()                                            
     score.show_score()                                          
     time.sleep(ball.ball_speed)                                 
     screen.update()
-   
 
 
-screen.exitonclick()                                           
+
+screen.exitonclick()                                            
