@@ -4,18 +4,17 @@ from turtle import Turtle
 class Score(Turtle):                                   
     def __init__(self):
         super().__init__()                             
-        self.penup()                                  
-        self.ht()                                     
-        self.color("white")                           
-        self.goto(0, 200)                      
-        self.r_score = 0                              
+        self.penup()                                   
+        self.ht()                                      
+        self.color("white")                            
+        self.goto(0, 200)                        
+        self.r_score = 0                               
         self.l_score = 0
         self.show_score()
 
-    def increment_rscore(self):                        
-        self.r_score += 1
+    def increment_r_score(self):                        
 
-    def increment_lscore(self):                        
+    def increment_l_score(self):                        
         self.l_score += 1
 
 
